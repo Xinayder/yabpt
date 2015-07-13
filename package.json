@@ -7,5 +7,36 @@
   "license": "MPL 2.0",
   "version": "1.0",
   "homepage": "https://github.com/RockyTV/yabpt",
-  "icon": "data/icon-32.png"
+  "icon": "data/icon-32.png",
+  "preferences": [
+      {
+        "name": "selectedCurrency",
+        "title": "Currency",
+        "description": "Display price information on the specified currency",
+        "type": "menulist",
+        "value": "BRL",
+        "options": [
+            {
+                "value": "USD",
+                "label": "USD"
+            },
+            {
+                "value": "GBP",
+                "label": "GBP"
+            },
+            {
+                "value": "CNY",
+                "label": "CNY"
+            },
+            {
+                "value": "EUR",
+                "label": "EUR"
+            },
+            {
+                "value": "BRL",
+                "label": "BRL"
+            }
+        ]
+    }
+  ]
 }
