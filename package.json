@@ -1,0 +1,9 @@
+{
+  "name": "yabpt",
+  "title": "Yet Another Bitcoin Price Ticker",
+  "id": "jid1-BYl3kts609WbCw",
+  "description": "A simple bitcoin price ticker, powered by CoinDesk.",
+  "author": "Alexandre Oliveira",
+  "license": "MPL 2.0",
+  "version": "1.0",
+}
