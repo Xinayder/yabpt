@@ -1,12 +1,44 @@
 {
   "name": "yabpt",
   "title": "Yet Another Bitcoin Price Ticker",
-  "id": "yabpt@jetpack",
+  "id": "jid1-BYl3kts609WbCw@jetpack",
   "description": "A simple bitcoin price ticker, powered by CoinDesk.",
   "author": "Alexandre Oliveira",
-  "license": "MPL 2.0",
-  "version": "1.0.2",
+  "license": "MPL-2.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/RockyTV/yabpt",
-  "icon": "data/icon-32.png",
-  "main": "lib/main.js"
+  "icon": "data/icon-48.png",
+  "main": "lib/main.js",
+
+  "preferences": [
+      {
+        "name": "selectedCurrency",
+        "title": "Currency",
+        "description": "Display current Bitcoin price in the specified target currency",
+        "type": "menulist",
+        "value": "USD",
+        "options": [
+            {
+                "value": "USD",
+                "label": "USD"
+            },
+            {
+                "value": "GBP",
+                "label": "GBP"
+            },
+            {
+                "value": "CNY",
+                "label": "CNY"
+            },
+            {
+                "value": "EUR",
+                "label": "EUR"
+            },
+            {
+                "value": "BRL",
+                "label": "BRL"
+            }
+        ]
+      }
+  ]
 }
