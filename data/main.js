@@ -4,9 +4,10 @@ var Request = require('sdk/request').Request;
 var Prefs = require('sdk/simple-prefs');
 var Preferences = require('sdk/simple-prefs').prefs;
 var Storage = require('sdk/simple-storage').storage;
+var data = require('sdk/self').data;
 var { setInterval, clearInterval } = require('sdk/timers');
 
-var INTERVAL_MINUTES = 2 * 60000; // 60000 milliseconds is 1 minute.
+var INTERVAL_MINUTES = 2.5 * 60000; // 60000 milliseconds is 1 minute.
 
 var yabptTimer = null;
 var button = null;
@@ -28,7 +29,6 @@ exports.main = function(options, callbacks) {
 
     // Listen for preference changes
     onPrefChanged = function(pref) {
-        console.debug("Preference " + pref + " value has changed!");
         Storage[pref] = Preferences[pref];
         loadData();
     }
@@ -45,58 +45,97 @@ exports.main = function(options, callbacks) {
         id: "yabpt-button",
         label: "1 bitcoin is worth $0 today",
         icon: {
-            "16": "./icon-16.png",
-            "32": "./icon-32.png",
-            "64": "./icon-64.png"
+            "16": data.url("icons/icon-16.png"),
+            "32": data.url("icons/icon-32.png"),
+            "64": data.url("icons/icon-64.png"),
+            "128": data.url("icons/icon-128.png")
         },
         badge: 0,
         badgeColor: "#F7931A",
         onClick: handleClick
     });
 
+    // Load data
     loadData();
 
+    // Handle the button onClick event
     function handleClick(state) {
-        tabs.open("http://coindesk.com/price");
+        tabs.open("https://blockchain.info/");
     }
 
-    function getSymbolForCurrency(currency) {
+    // Function that returns a language code from a currency code
+    function getCountryCodeForCurrency(currency) {
         switch (currency) {
             default:
-            case "USD":
-                return "$";
-                break;
+            case "AUD":
+            case "NZD":
+            case "CAD":
             case "GBP":
-                return "£";
-                break;
-            case "EUR":
-                return "€";
-                break;
-            case "CNY":
-                return "¥";
+            case "NZD":
+            case "SGD":
+            case "KRW":
+            case "CHF":
+            case "TWD":
+            case "THB":
+            case "USD":
+                return "en";
                 break;
             case "BRL":
-                return "R$";
+                return "pt-BR";
+                break;
+            case "CLP":
+                return "es";
+                break;
+            case "CNY":
+            case "HKD":
+                return "zh";
+                break;
+            case "DKK":
+                return "da-DK";
+                break;
+            case "EUR":
+                return "de-DE";
+                break;
+            case "HKD":
+                return "zn-HK";
+                break;
+            case "ISK":
+                return "is-IS";
+                break;
+            case "JPY":
+                return "jp-JP";
+                break;
+            case "PLN":
+                return "pl-PL";
+                break;
+            case "RUB":
+                return "ru-RU";
+                break;
+            case "SEK":
+                return "sv-SE";
                 break;
         }
     }
 
-    // Request the current price from CoinDesk, and update the button badge and label
+    // Request the current price from Blockchain, and update the button badge and label
     function loadData() {
-        console.debug("loading data...");
         var selectedCurrency = Preferences.selectedCurrency;
-        var apiUrl = "https://api.coindesk.com/v1/bpi/currentprice/{0}.json".replace("{0}", selectedCurrency);
+        var apiUrl = "https://blockchain.info/ticker";
         req = Request({
             url: apiUrl,
             onComplete: function(response) {
-                // There's two fields being returned from the endpoint
-                // rate is a string object, already formatted
-                // rate_float is a number, which isn't formatted
-                var usdRate = response.json.bpi[selectedCurrency].rate_float;
-                var roundRate = usdRate.toFixed(2).toString().replace(".", ",");
+                var badgePrice = response.json[selectedCurrency].last;
+                // Format the currency according to the country/region it belongs to
+                var currencyPrice = badgePrice.toLocaleString(getCountryCodeForCurrency(selectedCurrency),
+                {
+                    currency: selectedCurrency,
+                    style: 'currency',
+                    currencyDisplay: 'symbol'
+                });
+                var labelText = "1 bitcoin is worth {0} today".replace("{0}", currencyPrice);
 
-                button.badge = Math.floor(usdRate);
-                button.label = "1 bitcoin is worth {1}{0} today".replace("{0}", roundRate).replace("{1}", getSymbolForCurrency(selectedCurrency));
+                button.badge = Math.floor(badgePrice);
+                button.label = labelText;
             }
         });
         req.get();
@@ -113,5 +152,5 @@ exports.onUnload = function(reason) {
         clearInterval(yabptTimer);
     }
     Storage.selectedCurrency = Preferences.selectedCurrency;
-    console.debug("unloaded");
+    button.destroy();
 }
