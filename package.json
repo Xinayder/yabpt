@@ -2,41 +2,105 @@
   "name": "yabpt",
   "title": "Yet Another Bitcoin Price Ticker",
   "id": "jid1-BYl3kts609WbCw@jetpack",
-  "description": "A simple bitcoin price ticker, powered by CoinDesk.",
+  "description": "A simple bitcoin price ticker, powered by Blockchain.info.",
   "author": "Alexandre Oliveira",
   "license": "MPL-2.0",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/RockyTV/yabpt",
-  "icon": "data/icon-48.png",
-  "main": "lib/main.js",
+  "icon": "resource://jid1-BYl3kts609WbCw-at-jetpack/data/icons/icon-128.png",
+  "main": "data/main.js",
 
   "preferences": [
       {
         "name": "selectedCurrency",
-        "title": "Currency",
-        "description": "Display current Bitcoin price in the specified target currency",
+        "title": "Display Currency",
+        "description": "Display current Bitcoin price in selected currency",
         "type": "menulist",
         "value": "USD",
         "options": [
             {
-                "value": "USD",
-                "label": "USD"
-            },
-            {
-                "value": "GBP",
-                "label": "GBP"
-            },
-            {
-                "value": "CNY",
-                "label": "CNY"
-            },
-            {
-                "value": "EUR",
-                "label": "EUR"
+                "value": "AUD",
+                "label": "Australian Dollar"
             },
             {
                 "value": "BRL",
-                "label": "BRL"
+                "label": "Brazilian Real"
+            },
+            {
+                "value": "GBP",
+                "label": "British Pound"
+            },
+            {
+                "value": "CAD",
+                "label": "Canadian Dollar"
+            },
+            {
+                "value": "CLP",
+                "label": "Chilean Peso"
+            },
+            {
+                "value": "CNY",
+                "label": "Chinese Yuan"
+            },
+            {
+                "value": "DKK",
+                "label": "Danish Krone"
+            },
+            {
+                "value": "EUR",
+                "label": "Euro"
+            },
+            {
+                "value": "HKD",
+                "label": "Hong Kong Dollar"
+            },
+            {
+                "value": "ISK",
+                "label": "Icelandic Króna"
+            },
+            {
+                "value": "JPY",
+                "label": "Japanese Yen"
+            },
+            {
+                "value": "NZD",
+                "label": "New Zealand Dollar"
+            },
+            {
+                "value": "PLN",
+                "label": "Polish Zloty"
+            },
+            {
+                "value": "RUB",
+                "label": "Russian Ruble"
+            },
+            {
+                "value": "SGD",
+                "label": "Singapore Dollar"
+            },
+            {
+                "value": "KRW",
+                "label": "South Korean Won"
+            },
+            {
+                "value": "SEK",
+                "label": "Swedish Krona"
+            },
+            {
+                "value": "CHF",
+                "label": "Swiss Franc"
+            },
+            {
+                "value": "TWD",
+                "label": "Taiwan Dollar"
+            },
+            {
+                "value": "THB",
+                "label": "Thai Baht"
+            },
+            {
+                "value": "USD",
+                "label": "U.S. Dollar"
             }
         ]
       }
