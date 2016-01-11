@@ -5,6 +5,7 @@ var Prefs = require('sdk/simple-prefs');
 var Preferences = require('sdk/simple-prefs').prefs;
 var Storage = require('sdk/simple-storage').storage;
 var data = require('sdk/self').data;
+var _ = require('sdk/l10n').get;
 var { setInterval, clearInterval } = require('sdk/timers');
 
 var yabptTimer = null;
@@ -16,12 +17,12 @@ var onPrefChanged = null;
 exports.main = function(options, callbacks) {
 
     // Instantiate our storage variable if it isn't available.
-    if (!Storage.selectedCurrency) {
-        Storage.selectedCurrency = "USD";
+    if (!Storage.selected_currency) {
+        Storage.selected_currency = "USD";
     }
     // Instantiate our interval variable if it isn't available
-    if (!Storage.refreshInterval) {
-        Storage.refreshInterval = 5;
+    if (!Storage.refresh_interval) {
+        Storage.refresh_interval = 5;
     }
 
     // Listen for preference changes
@@ -34,22 +35,22 @@ exports.main = function(options, callbacks) {
 
     // Check if our local storage saved variable isn't null.
     // If it isn't, set our preference to its value.
-    if (Storage.selectedCurrency) {
-        Preferences.selectedCurrency = Storage.selectedCurrency;
+    if (Storage.selected_currency) {
+        Preferences.selected_currency = Storage.selected_currency;
     }
-    if (Storage.refreshInterval) {
-        Preferences.refreshInterval = Storage.refreshInterval;
+    if (Storage.refresh_interval) {
+        Preferences.refresh_interval = Storage.refresh_interval;
     }
     
     // Check if our timer is not set, so we can set it
     if (yabptTimer == null) {
-        yabptTimer = setInterval(loadData, Preferences.refreshInterval * 6000); // Calls loadData(); every x seconds (x defined at INTERVAL_MINUTES)
+        yabptTimer = setInterval(loadData, Preferences.refresh_interval * 6000); // Calls loadData(); every x seconds (x defined at INTERVAL_MINUTES)
     }
 
     // Create our button
     button = buttons.ActionButton({
         id: "yabpt-button",
-        label: "1 bitcoin is worth $0 today",
+        label: _("bitcoin_badge_text_none"),
         icon: {
             "16": data.url("icons/icon-16.png"),
             "32": data.url("icons/icon-32.png"),
@@ -74,7 +75,7 @@ exports.main = function(options, callbacks) {
     function reRegisterTimer() {
         if (yabptTimer != null) {
             clearInterval(yabptTimer);
-            yabptTimer = setInterval(loadData, Preferences.refreshInterval * 6000);
+            yabptTimer = setInterval(loadData, Preferences.refresh_interval * 6000);
         }
     }
 
@@ -134,7 +135,7 @@ exports.main = function(options, callbacks) {
 
     // Request the current price from Blockchain, and update the button badge and label
     function loadData() {
-        var selectedCurrency = Preferences.selectedCurrency;
+        var selectedCurrency = Preferences.selected_currency;
         var apiUrl = "https://blockchain.info/ticker";
         req = Request({
             url: apiUrl,
@@ -147,7 +148,8 @@ exports.main = function(options, callbacks) {
                     style: 'currency',
                     currencyDisplay: 'symbol'
                 });
-                var labelText = "1 bitcoin is worth {0} today".replace("{0}", currencyPrice);
+                console.log(_("bitcoin_badge_text"));
+                var labelText = _("bitcoin_badge_text", currencyPrice);
 
                 button.badge = Math.floor(badgePrice);
                 button.label = labelText;
@@ -166,7 +168,7 @@ exports.onUnload = function(reason) {
     if (yabptTimer != null) {
         clearInterval(yabptTimer);
     }
-    Storage.selectedCurrency = Preferences.selectedCurrency;
-    Storage.refreshInterval = Preferences.refreshInterval;
+    Storage.selected_currency = Preferences.selected_currency;
+    Storage.refresh_interval = Preferences.refresh_interval;
     button.destroy();
 }

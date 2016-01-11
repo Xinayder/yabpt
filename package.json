@@ -12,7 +12,7 @@
 
   "preferences": [
       {
-        "name": "selectedCurrency",
+        "name": "selected_currency",
         "title": "Currency",
         "description": "Display current Bitcoin price in selected currency",
         "type": "menulist",
@@ -105,7 +105,7 @@
         ]
       },
       {
-          "name": "refreshInterval",
+          "name": "refresh_interval",
           "title": "Refresh Interval",
           "description": "Interval, in seconds, to retrieve information from the API. Recommended values are 2-5 seconds or minutes.",
           "type": "integer",
