@@ -103,6 +103,13 @@
                 "label": "U.S. Dollar"
             }
         ]
+      },
+      {
+          "name": "refreshInterval",
+          "title": "Refresh Interval",
+          "description": "Interval, in seconds, to retrieve information from the API. Recommended values are 2-5 seconds or minutes.",
+          "type": "integer",
+          "value": 5
       }
   ]
 }

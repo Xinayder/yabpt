@@ -7,8 +7,6 @@ var Storage = require('sdk/simple-storage').storage;
 var data = require('sdk/self').data;
 var { setInterval, clearInterval } = require('sdk/timers');
 
-var INTERVAL_MINUTES = 2.5 * 60000; // 60000 milliseconds is 1 minute.
-
 var yabptTimer = null;
 var button = null;
 var req = null;
@@ -21,16 +19,16 @@ exports.main = function(options, callbacks) {
     if (!Storage.selectedCurrency) {
         Storage.selectedCurrency = "USD";
     }
-
-    // Check if our timer is not set, so we can set it
-    if (yabptTimer == null) {
-        yabptTimer = setInterval(loadData, INTERVAL_MINUTES); // Calls loadData(); every x minutes (x defined at INTERVAL_MINUTES)
+    // Instantiate our interval variable if it isn't available
+    if (!Storage.refreshInterval) {
+        Storage.refreshInterval = 5;
     }
 
     // Listen for preference changes
     onPrefChanged = function(pref) {
         Storage[pref] = Preferences[pref];
         loadData();
+        reRegisterTimer();
     }
     Prefs.on("", onPrefChanged);
 
@@ -38,6 +36,14 @@ exports.main = function(options, callbacks) {
     // If it isn't, set our preference to its value.
     if (Storage.selectedCurrency) {
         Preferences.selectedCurrency = Storage.selectedCurrency;
+    }
+    if (Storage.refreshInterval) {
+        Preferences.refreshInterval = Storage.refreshInterval;
+    }
+    
+    // Check if our timer is not set, so we can set it
+    if (yabptTimer == null) {
+        yabptTimer = setInterval(loadData, Preferences.refreshInterval * 6000); // Calls loadData(); every x seconds (x defined at INTERVAL_MINUTES)
     }
 
     // Create our button
@@ -61,6 +67,15 @@ exports.main = function(options, callbacks) {
     // Handle the button onClick event
     function handleClick(state) {
         tabs.open("https://blockchain.info/");
+    }
+    
+    // If we change the refresh interval setting,
+    // we want to re-register the timer using the new value.
+    function reRegisterTimer() {
+        if (yabptTimer != null) {
+            clearInterval(yabptTimer);
+            yabptTimer = setInterval(loadData, Preferences.refreshInterval * 6000);
+        }
     }
 
     // Function that returns a language code from a currency code
@@ -152,5 +167,6 @@ exports.onUnload = function(reason) {
         clearInterval(yabptTimer);
     }
     Storage.selectedCurrency = Preferences.selectedCurrency;
+    Storage.refreshInterval = Preferences.refreshInterval;
     button.destroy();
 }
