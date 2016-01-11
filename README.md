@@ -3,6 +3,7 @@ yabpt stands for **Y**et **A**nother **B**itcoin **P**rice **T**icker. It is a F
 
 yabpt is powered by [Blockchain.info](https://blockchain.info).
 
+Available at [Mozilla Add-Ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/yabpt/).
 
 ### Translating
 If you want to translate yabpt to your native language, here are a few steps to help you get started with it:
