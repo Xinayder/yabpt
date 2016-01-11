@@ -13,7 +13,7 @@
   "preferences": [
       {
         "name": "selectedCurrency",
-        "title": "Display Currency",
+        "title": "Currency",
         "description": "Display current Bitcoin price in selected currency",
         "type": "menulist",
         "value": "USD",
