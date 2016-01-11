@@ -148,7 +148,6 @@ exports.main = function(options, callbacks) {
                     style: 'currency',
                     currencyDisplay: 'symbol'
                 });
-                console.log(_("bitcoin_badge_text"));
                 var labelText = _("bitcoin_badge_text", currencyPrice);
 
                 button.badge = Math.floor(badgePrice);
