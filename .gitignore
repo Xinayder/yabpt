@@ -1,2 +1,3 @@
 *.xpi
 Thumbs.db
+web-ext-artifacts/*
