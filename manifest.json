@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Yet Another Bitcoin Price Ticker",
+  "short_name": "YABPT",
+  "version": "1.5.0",
+  "description": "__MSG_extensionDescription__",
+  "icons": {
+    "128": "icons/icon.svg"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/icon.svg",
+    "default_title": "Yet Another Bitcoin Price Ticker",
+    "browser_style": true
+  },
+
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ]
+  },
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "*://blockchain.info/ticker"
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "jid1-BYl3kts609WbCw@jetpack"
+    }
+  },
+
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": true
+  },
+
+  "default_locale": "en"
+}
