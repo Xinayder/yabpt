@@ -11,7 +11,6 @@
     }
 
     function restoreOptions() {
-        document.querySelector('h3').textContent = chrome.i18n.getMessage('optionsHeader');
         document.querySelector('#setting_description span.title').textContent = chrome.i18n.getMessage("optionCurrency");
         document.querySelector('#setting_description description').textContent = chrome.i18n.getMessage("optionCurrencyDesc");
         chrome.storage.local.get('yabpt', function(res) {
