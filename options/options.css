@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 0 .4rem;
     font: 1rem/1.5 "Helvetica Neue", Arial, sans-serif;
     color: #333;
 }
@@ -12,12 +12,11 @@ body {
 description {
     display: block;
     font-size: .75rem/1.5;
-    padding: 0 .8rem;
+    padding: 0 .4rem;
     color: #6d6d6d;
 }
 
 .title {
-    padding: 0 .4rem;
     display: block;
     float: left;
 }
@@ -25,4 +24,8 @@ description {
 select {
     margin-left: .2rem;
     display: inline-block;
+}
+
+hr {
+    color: rgba(100, 100, 100, .54);
 }

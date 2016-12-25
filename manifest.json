@@ -5,11 +5,15 @@
   "version": "1.5.0",
   "description": "__MSG_extensionDescription__",
   "icons": {
-    "128": "icons/icon.svg"
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png"
   },
 
   "browser_action": {
-    "default_icon": "icons/icon.svg",
+    "default_icon": "icons/icon-48.png",
     "default_title": "Yet Another Bitcoin Price Ticker",
     "browser_style": true
   },
@@ -23,19 +27,19 @@
   "permissions": [
     "storage",
     "tabs",
-    "*://blockchain.info/ticker"
+    "https://blockchain.info/ticker"
   ],
+
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": false
+  },
+
+  "default_locale": "en",
 
   "applications": {
     "gecko": {
       "id": "jid1-BYl3kts609WbCw@jetpack"
     }
-  },
-
-  "options_ui": {
-    "page": "options/options.html",
-    "chrome_style": true
-  },
-
-  "default_locale": "en"
+  }
 }
