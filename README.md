@@ -1,9 +1,5 @@
 # yabpt
-yabpt is a browser extension that displays the current price of Bitcoin in more than 15 different currencies. It's nice, elegant, clean and simple.
-
-yabpt is powered by [Blockchain.info](https://blockchain.info).
-
-Available at [Mozilla Add-Ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/yabpt/).
+yabpt is a browser extension that displays the current price of Bitcoin in more than 15 different currencies. It's nice, elegant, clean and simple. Powered by [Blockchain.info](https://blockchain.info).
 
 ## Download
 - Firefox: https://addons.mozilla.org/en-US/firefox/addon/yabpt/
