@@ -1,55 +1,69 @@
-(function() {
+(function () {
     // Easy access to settings
     var settings = {
         currency: 'USD'
     }
 
-        // Function that returns a language code from a currency code
-        function getCountryCodeForCurrency(currency) {
-            switch (currency) {
-                default:
+    // Function that returns a language code from a currency code
+    function getCountryCodeForCurrency(currency) {
+        switch (currency) {
+            default:
                 case "AUD":
                 case "NZD":
                 case "CAD":
                 case "GBP":
-                case "NZD":
                 case "SGD":
                 case "KRW":
                 case "CHF":
                 case "TWD":
                 case "THB":
+                case "INR":
                 case "USD":
-                    return "en";
-                case "BRL":
+                return "en";
+            case "BRL":
                     return "pt-BR";
-                case "CLP":
+            case "CLP":
                     return "es";
-                case "CNY":
-                case "HKD":
+            case "CNY":
                     return "zh";
-                case "DKK":
+            case "DKK":
                     return "da-DK";
-                case "EUR":
+            case "EUR":
                     return "de-DE";
-                case "HKD":
+            case "HKD":
                     return "zn-HK";
-                case "ISK":
+            case "ISK":
                     return "is-IS";
-                case "JPY":
+            case "JPY":
                     return "jp-JP";
-                case "PLN":
+            case "PLN":
                     return "pl-PL";
-                case "RUB":
+            case "RUB":
                     return "ru-RU";
-                case "SEK":
+            case "SEK":
                     return "sv-SE";
 
-            }
+        }
     }
 
     function updateBadgeText(price) {
+        var floorPrice = Math.floor(price);
+        // Get the number of digits the price has
+        var numDigits = Math.floor((Math.log(floorPrice) * Math.LOG10E) + 1);
+
+        var badgeText = floorPrice.toString();
+
+        // Firefox can't have more than 4 characters on the badge text.
+        // Instead, we display a '+', indicating that there are more digits.
+        if (numDigits > 4) {
+            var re = new RegExp(/^\d{3}/);
+            var match = re.exec(floorPrice.toString());
+
+            badgeText = match[0] + "+";
+        }
+
         chrome.browserAction.setBadgeText({
-            text: Math.floor(price).toString()
+            text: badgeText
         });
 
         chrome.browserAction.setTitle({
@@ -64,11 +78,11 @@
     function updateBadge() {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://blockchain.info/ticker", true);
-        xhr.onreadystatechange = function() {
+        xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 var response = JSON.parse(xhr.responseText);
                 var price = response[settings.currency].last;
-                
+
                 updateBadgeText(price);
             }
         }
@@ -76,11 +90,13 @@
     }
 
     function setupInterval() {
-        window.setInterval(function() { updateBadge(); }, 600000);
+        window.setInterval(function () {
+            updateBadge();
+        }, 600000);
     }
 
     function setupStorage() {
-        chrome.storage.local.get(['yabpt'], function(prefs) {
+        chrome.storage.local.get(['yabpt'], function (prefs) {
             if (prefs['yabpt'] === undefined) {
                 chrome.storage.local.set({
                     yabpt: settings
@@ -99,7 +115,7 @@
             text: "0"
         });
 
-        chrome.browserAction.onClicked.addListener(function(tab) {
+        chrome.browserAction.onClicked.addListener(function (tab) {
             chrome.tabs.create({
                 url: 'https://blockchain.info/'
             });
@@ -107,7 +123,7 @@
     }
 
     function getCurrencyFromStorage() {
-        chrome.storage.local.get(['yabpt'], function(prefs) {
+        chrome.storage.local.get(['yabpt'], function (prefs) {
             settings = prefs['yabpt'];
             updateBadge();
         });
