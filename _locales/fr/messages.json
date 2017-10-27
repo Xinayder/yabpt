@@ -1,0 +1,23 @@
+{
+    "badgeTooltip": {
+        "message": "1 bitcoin vaut $1 aujourd'hui",
+        "description": "Texte qui apparaît lorsque la souris survole le bouton addons dans la barre d'outils du navigateur."
+    },
+
+    "extensionDescription": {
+        "message": "Un simple ticker de prix Bitcoin, fourni par Blockchain.info.",
+        "description": "Description de l'addon."
+    },
+
+    "optionsHeader": {
+        "message": "Options"
+    },
+
+    "optionCurrency": {
+        "message": "Monnaie:"
+    },
+
+    "optionCurrencyDesc": {
+        "message": "Affiche le prix Bitcoin actuel dans la devise sélectionnée"
+    }
+}
