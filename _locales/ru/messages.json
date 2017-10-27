@@ -1,0 +1,23 @@
+{
+  "badgeTooltip": {
+    "message": "1 биткоин сегодня стоит $1",
+    "description": "Чтобы текст отображался, наведите курсор мыши на значок расширения, на панели инструментов браузера."
+  },
+
+  "extensionDescription": {
+    "message": "Простой прайс лист биткоина, на основе Blockchain.info.",
+    "description": "Описание расширения."
+  },
+
+  "optionsHeader": {
+    "message": "Опции"
+  },
+
+  "optionCurrency": {
+    "message": "Валюта:"
+  },
+
+  "optionCurrencyDesc": {
+    "message": "Выводит, для выбранной валюты, тeкущую стоимость биткоина."
+  }
+}
