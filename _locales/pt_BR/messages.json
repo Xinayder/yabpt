@@ -4,16 +4,16 @@
     "description": "Text that shows up when the mouse is hovering over the add-on's button in the browser's toolbar."
   },
   "extensionDescription": {
-    "message": "A simple bitcoin price ticker, powered by Blockchain.info.",
+    "message": "Um simples ticker de preços do bitcoin, fornecidos por Blockchain.info.",
     "description": "Description of the add-on."
   },
   "optionsHeader": {
-    "message": "Options"
+    "message": "Opções"
   },
   "optionCurrency": {
-    "message": "Currency:"
+    "message": "Moeda:"
   },
   "optionCurrencyDesc": {
-    "message": "Display current Bitcoin price in selected currency"
+    "message": "Exibe o preço atual da Bitcoin na moeda selecionada"
   }
 }
