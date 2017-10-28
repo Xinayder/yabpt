@@ -1,0 +1,23 @@
+{
+  "badgeTooltip": {
+    "message": "1 bitcoin இன்று $1 மதிப்பு",
+    "description": "உலாவியின் டூல்பாரில் உள்ள add-on இன் பொத்தானை சுட்டி எடுக்கும் போது காட்டும் உரை."
+  },
+
+  "extensionDescription": {
+    "message": "Blockchain.info மூலம் இயக்கப்படும் ஒரு எளிய பிட்கின் விலை டிக்கர்.",
+    "description": "கூடுதல் இணைப்பு."
+  },
+  
+  "optionsHeader": {
+    "message": "விருப்பங்கள்"
+  },
+
+  "optionCurrency": {
+    "message": "நாணயம்:"
+  },
+
+  "optionCurrencyDesc": {
+    "message": "தேர்ந்தெடுக்கப்பட்ட நாணயத்தில் தற்போதைய Bitcoin விலை காட்டவும்"
+  }
+}
