@@ -1,0 +1,23 @@
+{
+  "badgeTooltip": {
+    "message": "1 bitcoin jest wart dzisiaj $1",
+    "description": "Tekst, który pojawia się, gdy mysz unosi się nad przyciskiem dodatku na pasku narzędzi przeglądarki."
+  },
+
+  "extensionDescription": {
+    "message": "Prosty cennik bitcoin, zasilany przez Blockchain.info.",
+    "description": "Opis dodatku."
+  },
+  
+  "optionsHeader": {
+    "message": "Opcje"
+  },
+
+  "optionCurrency": {
+    "message": "Waluta:"
+  },
+
+  "optionCurrencyDesc": {
+    "message": "Wyświetl aktualną cenę Bitcoin w wybranej walucie"
+  }
+}
