@@ -10,10 +10,10 @@
   "optionsHeader": {
     "message": "Optionen"
   },
-  "optionCurrency": {
-    "message": "Währung:"
+  "option_currency_title": {
+    "message": "Currency:"
   },
-  "optionCurrencyDesc": {
-    "message": "Zeigt den jetzigen Bitcoin Preis in der ausgewählten Währung"
+  "option_currency_desc": {
+    "message": "Display current Bitcoin price in selected currency"
   }
 }
