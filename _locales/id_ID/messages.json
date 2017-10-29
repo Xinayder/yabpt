@@ -3,21 +3,17 @@
     "message": "Hari ini 1 bitcoin sama dengan $1",
     "description": "Text yan akan muncul saat mouse berada diatas tombol add-on dalam browser toolbar."
   },
-
   "extensionDescription": {
     "message": "Menampilkan harga bitcoin dalam tampilan sederhana, dipersembahkan oleh Blockchain.info.",
     "description": "Keterangan singkat mengenai add-on."
   },
-  
   "optionsHeader": {
     "message": "Pilihan"
   },
-
-  "optionCurrency": {
+  "option_currency_title": {
     "message": "Mata uang:"
   },
-
-  "optionCurrencyDesc": {
+  "option_currency_desc": {
     "message": "Menampilkan harga Bitcoin dalam mata uang terpilih"
   }
 }

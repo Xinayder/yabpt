@@ -3,21 +3,17 @@
     "message": "1 Bitcoin is vandaag $1 waard",
     "description": "Tekst die getoond wordt als de muis boven de add-on-knop zweeft"
   },
-
   "extensionDescription": {
     "message": "Een eenvoudige Bitcoinwaarde-Ticker, gevoed door Blockchain.info.",
     "description": "Beschrijving van de add-on."
   },
-  
   "optionsHeader": {
     "message": "Voorkeuren"
   },
-
-  "optionCurrency": {
+  "option_currency_title": {
     "message": "Valuta:"
   },
-
-  "optionCurrencyDesc": {
+  "option_currency_desc": {
     "message": "Toont de huidige Bitcoinwaarde in de gekozen valuta"
   }
 }
