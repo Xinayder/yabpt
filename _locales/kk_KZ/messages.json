@@ -10,10 +10,10 @@
   "optionsHeader": {
     "message": "Баптаулар"
   },
-  "optionCurrency": {
-    "message": "Валюта:"
+  "option_currency_title": {
+    "message": "Currency:"
   },
-  "optionCurrencyDesc": {
-    "message": "Биткойн қазіргі бағамын таңдалған валютада көрсету"
+  "option_currency_desc": {
+    "message": "Display current Bitcoin price in selected currency"
   }
 }
