@@ -1,19 +1,19 @@
 {
   "badgeTooltip": {
-    "message": "1 bitcoin is worth $1 today",
+    "message": "1 Bitcoin is vandaag $1 waard",
     "description": "Text that shows up when the mouse is hovering over the add-on's button in the browser's toolbar."
   },
   "extensionDescription": {
-    "message": "A simple bitcoin price ticker, powered by Blockchain.info.",
+    "message": "Een eenvoudige Bitcoinwaarde-Ticker, gevoed door Blockchain.info.",
     "description": "Description of the add-on."
   },
   "optionsHeader": {
-    "message": "Options"
+    "message": "Voorkeuren"
   },
   "option_currency_title": {
-    "message": "Currency:"
+    "message": "Valuta:"
   },
-  "option_currency_desc": {
-    "message": "Display current Bitcoin price in selected currency"
+  "option_currency_summary": {
+    "message": "Toont de huidige Bitcoinwaarde in de gekozen valuta"
   }
 }
