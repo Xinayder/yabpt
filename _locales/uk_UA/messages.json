@@ -1,0 +1,23 @@
+{
+  "badgeTooltip": {
+    "message": "1 біткойн сьогодні коштує $1",
+    "description": "Для відображення тексту наведіть курсор мишки на значок розширення, що на панелі інструмнетів браузера."
+  },
+
+  "extensionDescription": {
+    "message": "Простий прайс лист біткойна на основі Blockchain.info.",
+    "description": "Опис розширення."
+  },
+
+  "optionsHeader": {
+    "message": "Опції"
+  },
+
+  "optionCurrency": {
+    "message": "Валюта:"
+  },
+
+  "optionCurrencyDesc": {
+    "message": "Відображає поточну вартість біткойна у вибраній валюті."
+  }
+}
