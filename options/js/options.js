@@ -32,17 +32,14 @@
         });
 
         chrome.storage.local.get('yabpt', function (res) {
-            // Need to adapt to the new system
-            if (res.yabpt.currency.length == 3) {
-                var prevOption = res.yabpt.currency;
-                var selectedCountry = 'us';
-                $.each(currencies, function (idx, c) {
-                    if (prevOption == c.currency) {
-                        selectedCountry = c.iso2;
-                    }
-                });
-                $('#currency').countrySelect('selectCountry', selectedCountry);
+            var selectedCountry = 'us';
+            for (var i = 0; i < currencies.length; i++) {
+                var item = currencies[i];
+                if (res.yabpt.currency == item.currency) {
+                    selectedCountry = item.iso2;
+                }
             }
+            $('#currency').countrySelect('selectCountry', selectedCountry);
         });
     }
 
