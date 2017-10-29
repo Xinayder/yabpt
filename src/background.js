@@ -4,48 +4,6 @@
         currency: 'USD'
     }
 
-    // Function that returns a language code from a currency code
-    function getCountryCodeForCurrency(currency) {
-        switch (currency) {
-            default:
-                case "AUD":
-                case "NZD":
-                case "CAD":
-                case "GBP":
-                case "SGD":
-                case "KRW":
-                case "CHF":
-                case "TWD":
-                case "THB":
-                case "INR":
-                case "USD":
-                return "en";
-            case "BRL":
-                    return "pt-BR";
-            case "CLP":
-                    return "es";
-            case "CNY":
-                    return "zh";
-            case "DKK":
-                    return "da-DK";
-            case "EUR":
-                    return "de-DE";
-            case "HKD":
-                    return "zn-HK";
-            case "ISK":
-                    return "is-IS";
-            case "JPY":
-                    return "jp-JP";
-            case "PLN":
-                    return "pl-PL";
-            case "RUB":
-                    return "ru-RU";
-            case "SEK":
-                    return "sv-SE";
-
-        }
-    }
-
     function updateBadgeText(price) {
         var floorPrice = Math.floor(price);
         // Get the number of digits the price has
@@ -67,7 +25,7 @@
         });
 
         chrome.browserAction.setTitle({
-            title: chrome.i18n.getMessage("badgeTooltip", price.toLocaleString(getCountryCodeForCurrency(settings.currency), {
+            title: chrome.i18n.getMessage("badgeTooltip", price.toLocaleString(navigator.language, {
                 currency: settings.currency,
                 style: 'currency',
                 currencyDisplay: 'symbol'
