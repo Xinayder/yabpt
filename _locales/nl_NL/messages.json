@@ -13,7 +13,7 @@
   "option_currency_title": {
     "message": "Valuta:"
   },
-  "option_currency_desc": {
+  "option_currency_summary": {
     "message": "Toont de huidige Bitcoinwaarde in de gekozen valuta"
   }
 }
