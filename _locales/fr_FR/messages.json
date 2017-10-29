@@ -13,7 +13,7 @@
     "option_currency_title": {
         "message": "Monnaie:"
     },
-    "option_currency_desc": {
+    "option_currency_summary": {
         "message": "Affiche la valeur actuelle du Bitcoin dans la monnaie sélectionnée"
     }
 }

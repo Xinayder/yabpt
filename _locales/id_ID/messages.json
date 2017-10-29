@@ -13,7 +13,7 @@
   "option_currency_title": {
     "message": "Mata uang:"
   },
-  "option_currency_desc": {
+  "option_currency_summary": {
     "message": "Menampilkan harga Bitcoin dalam mata uang terpilih"
   }
 }
