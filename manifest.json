@@ -35,7 +35,7 @@
     "chrome_style": false
   },
 
-  "default_locale": "en",
+  "default_locale": "en_US",
 
   "applications": {
     "gecko": {
