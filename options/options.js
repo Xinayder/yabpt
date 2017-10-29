@@ -21,8 +21,19 @@
     }
 
     function restoreOptions() {
-        document.querySelector('#setting_description span.title').textContent = chrome.i18n.getMessage("optionCurrency");
-        document.querySelector('#setting_description description').textContent = chrome.i18n.getMessage("optionCurrencyDesc");
+        $('label#setting_description').each(function (idx, e) {
+            var element = $(e);
+            var pref = element.attr('for');
+
+            var title = element.find('span.title')
+            var desc = element.find('description');
+
+            console.log('option_' + pref);
+
+            title.text(chrome.i18n.getMessage('option_' + pref + '_title'));
+            desc.text(chrome.i18n.getMessage('option_' + pref + '_summary'));
+        });
+
         chrome.storage.local.get('yabpt', function (res) {
             // Need to adapt to the new system
             if (res.yabpt.currency.length == 3) {
