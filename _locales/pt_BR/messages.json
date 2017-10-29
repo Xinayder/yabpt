@@ -1,6 +1,6 @@
 {
     "badgeTooltip": {
-        "message": "1 bitcoin vale US $1 hoje",
+        "message": "1 bitcoin vale $1 hoje",
         "description": "Texto que aparece quando o mouse está pairando sobre o botão do add-on na barra de ferramentas do navegador."
     },
     "extensionDescription": {
