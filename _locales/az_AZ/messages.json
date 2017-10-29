@@ -3,21 +3,17 @@
     "message": "1 bitcoin bu gün $1 dəyərindədir",
     "description": "Siçan brauzerin alət çubuğundakı bu əlavənin düyməsi üzərində olarkən görünən mətn."
   },
-
   "extensionDescription": {
     "message": "Blockchain.info tərəfindən, sadə bitcoin qiyməti izləyicisi.",
     "description": "Əlavənin izahı"
   },
-  
   "optionsHeader": {
     "message": "Seçimlər"
   },
-
-  "optionCurrency": {
+  "option_currency_title": {
     "message": "Valyuta:"
   },
-
-  "optionCurrencyDesc": {
+  "option_currency_desc": {
     "message": "Mövcud Bitcoin qiymətini seçilmiş valyutada göstərin"
   }
 }

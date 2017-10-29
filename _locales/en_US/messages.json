@@ -3,21 +3,17 @@
     "message": "1 bitcoin is worth $1 today",
     "description": "Text that shows up when the mouse is hovering over the add-on's button in the browser's toolbar."
   },
-
   "extensionDescription": {
     "message": "A simple bitcoin price ticker, powered by Blockchain.info.",
     "description": "Description of the add-on."
   },
-  
   "optionsHeader": {
     "message": "Options"
   },
-
-  "optionCurrency": {
+  "option_currency_title": {
     "message": "Currency:"
   },
-
-  "optionCurrencyDesc": {
+  "option_currency_desc": {
     "message": "Display current Bitcoin price in selected currency"
   }
 }

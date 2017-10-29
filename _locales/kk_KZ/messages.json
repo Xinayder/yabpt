@@ -3,21 +3,17 @@
         "message": "1 биткойн бүгін $1 тұрады",
         "description": "Тінтуір көрсеткішін браузер жолағында жүргізген кезде қосымша батырмасының үстінен пайда болатын мәтін."
     },
-
     "extensionDescription": {
         "message": "Биткойн қарапайым баға көрсеткіші, ақпарат Blockchain.info сайтынан",
         "description": "Қосымша сипаттамасы"
     },
-
     "optionsHeader": {
         "message": "Баптаулар"
     },
-
-    "optionCurrency": {
+    "option_currency_title": {
         "message": "Валюта:"
     },
-
-    "optionCurrencyDesc": {
+    "option_currency_desc": {
         "message": "Биткойн қазіргі бағамын таңдалған валютада көрсету"
     }
 }
