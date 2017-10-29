@@ -1,7 +1,6 @@
 (function () {
     var cs = $('#currency').countrySelect({
         preferredCountries: [],
-        onlyCountries: ['au', 'br', 'gb', 'ca', 'cl', 'cn', 'dk', 'eu', 'hk', 'in', 'is', 'jp', 'nz', 'pl', 'ru', 'si', 'kr', 'se', 'ch', 'tw', 'ta', 'us'],
         responsiveDropdown: true
     });
 
@@ -27,8 +26,6 @@
 
             var title = element.find('span.title')
             var desc = element.find('description');
-
-            console.log('option_' + pref);
 
             title.text(chrome.i18n.getMessage('option_' + pref + '_title'));
             desc.text(chrome.i18n.getMessage('option_' + pref + '_summary'));
