@@ -1,0 +1,19 @@
+{
+  "badgeTooltip": {
+    "message": "1 bitcoin bu gün $1 dəyərindədir",
+    "description": "Text that shows up when the mouse is hovering over the add-on's button in the browser's toolbar."
+  },
+  "extensionDescription": {
+    "message": "Blockchain.info tərəfindən, sadə bitcoin qiyməti izləyicisi.",
+    "description": "Description of the add-on."
+  },
+  "optionsHeader": {
+    "message": "Seçimlər"
+  },
+  "option_currency_title": {
+    "message": "Valyuta:"
+  },
+  "option_currency_summary": {
+    "message": "Mövcud Bitcoin qiymətini seçilmiş valyutada göstərin"
+  }
+}
