@@ -1,0 +1,19 @@
+{
+  "badgeTooltip": {
+    "message": "1 bitcoin er $1 værd i dag",
+    "description": "Tekst der vises når, musen holdes over, udvidelsens knap i browserens værktøjslinje"
+  },
+  "extensionDescription": {
+    "message": "En simpel Bitcoin prischecker, gjort mulig af Blockchain.info.",
+    "description": "Beskrivelse af udvidelsen"
+  },
+  "optionsHeader": {
+    "message": "Indstillinger"
+  },
+  "option_currency_title": {
+    "message": "Valuta:"
+  },
+  "option_currency_summary": {
+    "message": "Vis den aktuelle Bitcoin pris i den valgte valuta"
+  }
+}
