@@ -1,0 +1,19 @@
+{
+  "badgeTooltip": {
+    "message": "1 bitcoin dnes odpovídá $1.",
+    "description": "Text, který se ukáže když uživatel najede myší na tlačítko add-onu v liště prohlížeče."
+  },
+  "extensionDescription": {
+    "message": "Jednoduchý bitcoin price ticker, který používá Blockchain.info.",
+    "description": "Popis add-onu."
+  },
+  "optionsHeader": {
+    "message": "Nastavení"
+  },
+  "option_currency_title": {
+    "message": "Měna:"
+  },
+  "option_currency_summary": {
+    "message": "Zobrazovat aktuální cenu Bitcoinu ve vybrané měně."
+  }
+}
