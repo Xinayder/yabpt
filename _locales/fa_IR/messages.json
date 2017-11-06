@@ -1,19 +1,19 @@
 {
   "badgeTooltip": {
-    "message": "1 bitcoin is worth $1 today",
+    "message": "1 بیت کوین امروز به میزان 1 دلار ارزش دارد",
     "description": "Text that shows up when the mouse is hovering over the add-on's button in the browser's toolbar."
   },
   "extensionDescription": {
-    "message": "A simple bitcoin price ticker, powered by Blockchain.info.",
+    "message": "یک نشانگر قیمت ساده بیت کوین، طراحی شده توسط سایت Blockchain.info",
     "description": "Description of the add-on."
   },
   "optionsHeader": {
-    "message": "Options"
+    "message": "گزینه ها"
   },
   "option_currency_title": {
-    "message": "Currency:"
+    "message": "واحد پول:"
   },
   "option_currency_summary": {
-    "message": "Display current Bitcoin price in selected currency"
+    "message": "نمایش قیمت کنونی بیت کوین بر حسب واحد پول انتخابی"
   }
 }
