@@ -1,4 +1,5 @@
 // wrap in UMD - see https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
+/* eslint-disable no-unused-vars */
 (function (factory) {
 	if (typeof define === "function" && define.amd) {
 		define(["jquery"], function ($) {

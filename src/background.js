@@ -1,13 +1,14 @@
+/* eslint-disable no-unused-vars, no-mixed-operators */
 (function () {
     // Easy access to settings
     var settings = {
         currency: 'USD'
-    }
+    };
 
     function updateBadgeText(price) {
         var floorPrice = Math.floor(price);
         // Get the number of digits the price has
-        var numDigits = Math.floor((Math.log(floorPrice) * Math.LOG10E) + 1);
+        var numDigits = Math.floor(Math.log(floorPrice) * Math.LOG10E + 1);
 
         var badgeText = floorPrice.toString();
 
@@ -30,7 +31,7 @@
                 style: 'currency',
                 currencyDisplay: 'symbol'
             }))
-        })
+        });
     }
 
     function updateBadge() {
@@ -43,7 +44,7 @@
 
                 updateBadgeText(price);
             }
-        }
+        };
         xhr.send();
     }
 
@@ -55,7 +56,7 @@
 
     function setupStorage() {
         chrome.storage.local.get(['yabpt'], function (prefs) {
-            if (prefs['yabpt'] === undefined) {
+            if (prefs.yabpt === undefined) {
                 chrome.storage.local.set({
                     yabpt: settings
                 });
@@ -82,12 +83,12 @@
 
     function getCurrencyFromStorage() {
         chrome.storage.local.get(['yabpt'], function (prefs) {
-            settings = prefs['yabpt'];
+            settings = prefs.yabpt;
             updateBadge();
         });
     }
 
-    function onStorageChanged(changes, areaName) {
+    function onStorageChanged() {
         getCurrencyFromStorage();
     }
 

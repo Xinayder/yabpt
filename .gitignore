@@ -2,3 +2,5 @@
 Thumbs.db
 web-ext-artifacts/*
 *.zip
+npm-debug.log
+node_modules/

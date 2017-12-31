@@ -1,4 +1,5 @@
 (function () {
+    // eslint-disable-next-line no-unused-vars
     var cs = $('#currency').countrySelect({
         preferredCountries: [],
         responsiveDropdown: true
@@ -24,7 +25,7 @@
             var element = $(e);
             var pref = element.attr('for');
 
-            var title = element.find('span.title')
+            var title = element.find('span.title');
             var desc = element.find('description');
 
             title.text(chrome.i18n.getMessage('option_' + pref + '_title'));
@@ -46,5 +47,5 @@
     document.addEventListener('DOMContentLoaded', restoreOptions);
     $('#currency').change(function () {
         saveOptions();
-    })
+    });
 })();
