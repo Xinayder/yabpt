@@ -1,3 +1,3 @@
 files:
-  - source: /**/_locales/**/messages.json
+  - source: /**/_locales/en_US/messages.json
     translation: /**/_locales/%locale_with_underscore%/%original_file_name%
