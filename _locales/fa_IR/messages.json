@@ -11,9 +11,9 @@
     "message": "گزینه ها"
   },
   "option_currency_title": {
-    "message": "Currency:"
+    "message": "واحد پول:"
   },
   "option_currency_summary": {
-    "message": "Display current Bitcoin price in selected currency"
+    "message": "نمایش قیمت بیت کوین در ارز انتخاب شده"
   }
 }
