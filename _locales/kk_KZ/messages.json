@@ -1,19 +1,19 @@
 {
   "badgeTooltip": {
-    "message": "1 bitcoin is worth $1 today",
+    "message": "1 биткойн бүгін $1 тұрады",
     "description": "Text that shows up when the mouse is hovering over the add-on's button in the browser's toolbar."
   },
   "extensionDescription": {
-    "message": "A simple bitcoin price ticker, powered by Blockchain.info.",
+    "message": "Биткойн қарапайым баға көрсеткіші, ақпарат Blockchain.info сайтынан",
     "description": "Description of the add-on."
   },
   "optionsHeader": {
-    "message": "Options"
+    "message": "Баптаулар"
   },
   "option_currency_title": {
-    "message": "Currency:"
+    "message": "Валюта:"
   },
   "option_currency_summary": {
-    "message": "Display current Bitcoin price in selected currency"
+    "message": "Биткойн қазіргі бағамын таңдалған валютада көрсету"
   }
 }
