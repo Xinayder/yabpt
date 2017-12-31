@@ -1,19 +1,19 @@
 {
   "badgeTooltip": {
-    "message": "1 биткоин сегодня стоит $1",
+    "message": "1 bitcoin is worth $1 today",
     "description": "Text that shows up when the mouse is hovering over the add-on's button in the browser's toolbar."
   },
   "extensionDescription": {
-    "message": "Простой прайс лист биткоина, на основе Blockchain.info.",
+    "message": "A simple bitcoin price ticker, powered by Blockchain.info.",
     "description": "Description of the add-on."
   },
   "optionsHeader": {
-    "message": "Опции"
+    "message": "Options"
   },
   "option_currency_title": {
-    "message": "Валюта:"
+    "message": "Currency:"
   },
   "option_currency_summary": {
-    "message": "Выводит, для выбранной валюты, тeкущую стоимость биткоина."
+    "message": "Display current Bitcoin price in selected currency"
   }
 }
