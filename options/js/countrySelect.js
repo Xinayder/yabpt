@@ -587,7 +587,7 @@
 	// n = name
 	// i = iso2 (2-char country code)
 	var allCountries = [
-		{ name: 'Australian Dollar', iso2: 'au', currency: 'AUS' },
+		{ name: 'Australian Dollar', iso2: 'au', currency: 'AUD' },
 		{ name: 'Brazilian Real', iso2: 'br', currency: 'BRL' },
 		{ name: 'British Pound', iso2: 'gb', currency: 'GBP' },
 		{ name: 'Canadian Dollar', iso2: 'ca', currency: 'CAD' },
