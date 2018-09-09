@@ -12,15 +12,15 @@
             { divider: 1e12, suffix: 'T' },
             { divider: 1e9, suffix: 'B' },
             { divider: 1e6, suffix: 'M' },
-            { divider: 1e3, suffix: 'K' },
+            { divider: 1e3, suffix: 'K' }
         ];
 
         for (var i = 0; i < ranges.length; i++) {
             if (price >= ranges[i].divider) {
-                var result = (price / ranges[i].divider);
+                var result = price / ranges[i].divider;
 
                 // Gets the integer part of the price
-                var intResult = parseInt(result);
+                var intResult = parseInt(result, 10);
 
 
                 // Finds the amount of digits the integer part has
