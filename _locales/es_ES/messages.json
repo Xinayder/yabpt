@@ -1,0 +1,19 @@
+{
+  "badgeTooltip": {
+    "message": "1 bitcoin vale $1 hoy",
+    "description": "Es el texto que se muestra cuando se pasa el ratón por encima del botón del add on en la barra del navegador."
+  },
+  "extensionDescription": {
+    "message": "Un simple ticker de precio de bitcoin, desarrollado por Blockchain.info.",
+    "description": "Descripción del addonn."
+  },
+  "optionsHeader": {
+    "message": "Opciones"
+  },
+  "option_currency_title": {
+    "message": "Moneda:"
+  },
+  "option_currency_summary": {
+    "message": "Mostrar el precio actual del Bitcoin en la moneda seleccionada"
+  }
+}

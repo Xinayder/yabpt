@@ -1,42 +1,18 @@
 {
-  "name": "yabpt",
-  "title": "Yet Another Bitcoin Price Ticker",
-  "id": "jid1-BYl3kts609WbCw",
-  "description": "A simple bitcoin price ticker, powered by CoinDesk.",
-  "author": "Alexandre Oliveira",
-  "license": "MPL 2.0",
-  "version": "1.0",
-  "homepage": "https://github.com/RockyTV/yabpt",
-  "icon": "data/icon-32.png",
-  "preferences": [
-      {
-        "name": "selectedCurrency",
-        "title": "Currency",
-        "description": "Display price information on the specified currency",
-        "type": "menulist",
-        "value": "BRL",
-        "options": [
-            {
-                "value": "USD",
-                "label": "USD"
-            },
-            {
-                "value": "GBP",
-                "label": "GBP"
-            },
-            {
-                "value": "CNY",
-                "label": "CNY"
-            },
-            {
-                "value": "EUR",
-                "label": "EUR"
-            },
-            {
-                "value": "BRL",
-                "label": "BRL"
-            }
-        ]
-    }
-  ]
+  "private": true,
+  "name": "yabpt-extension",
+  "version": "0.0.0",
+  "license": "GPL-3.0",
+  "scripts": {
+    "test": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RockyTV/yabpt.git"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "web-ext": "^2.2.2"
+  }
 }
