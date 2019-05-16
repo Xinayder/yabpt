@@ -8,15 +8,23 @@
     var currencies = $.fn.countrySelect.getCountryData();
 
     function saveOptions() {
-        setOption('currency', $('#currency').countrySelect('getSelectedCountryData').currency);
+        var option = {
+            currency: $('#currency').countrySelect('getSelectedCountryData').currency,
+            frequency: document.getElementById('frequency').value,
+            upperLimit: document.getElementById('upperLimit').value,
+            lowerLimit: document.getElementById('lowerLimit').value
+        }
+
+        setOption(option);
+
     }
 
-    function setOption(option, value) {
-        var yabpt = {};
-        yabpt[option] = value;
-
+    function setOption(option) {
         chrome.storage.local.set({
-            yabpt: yabpt
+            currency: option['currency'],
+            frequency: option['frequency'],
+            upperLimit: option['upperLimit'],
+            lowerLimit: option['lowerLimit']
         });
     }
 
@@ -32,20 +40,29 @@
             desc.text(chrome.i18n.getMessage('option_' + pref + '_summary'));
         });
 
-        chrome.storage.local.get('yabpt', function (res) {
+        chrome.storage.local.get('currency', function (res) {
             var selectedCountry = 'us';
             for (var i = 0; i < currencies.length; i++) {
                 var item = currencies[i];
-                if (res.yabpt.currency == item.currency) {
+                if (res.currency == item.currency) {
                     selectedCountry = item.iso2;
                 }
             }
             $('#currency').countrySelect('selectCountry', selectedCountry);
         });
+        chrome.storage.local.get(function (res) {
+            document.getElementById('frequency').value = res.frequency;
+            document.getElementById('upperLimit').value = res.upperLimit;
+            document.getElementById('lowerLimit').value = res.lowerLimit;
+        });
+
     }
 
     document.addEventListener('DOMContentLoaded', restoreOptions);
     $('#currency').change(function () {
+        saveOptions();
+    });
+    $('input').change(function () {
         saveOptions();
     });
 })();

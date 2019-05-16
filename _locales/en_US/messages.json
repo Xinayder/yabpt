@@ -1,6 +1,6 @@
 {
   "badgeTooltip": {
-    "message": "1 bitcoin is worth $1 today",
+    "message": "1 bitcoin is worth $1",
     "description": "Text that shows up when the mouse is hovering over the add-on's button in the browser's toolbar."
   },
   "extensionDescription": {
