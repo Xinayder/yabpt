@@ -1,0 +1,23 @@
+{
+  "badgeTooltip": {
+    "message": "یک بیت کوین امروز ارزش ۱ دلار دارد",
+    "description": ".متنی که نشان داده می شود زمانی که موس روی دکمه افزودنی در نوار ابزار مرورگر شناور شده است"
+  },
+
+  "extensionDescription": {
+    "message": "Blockchain.info یک تیکر قیمت بیت کوین ساده، طراحی شده توسط",
+    "description": "شرح افزودنی"
+  },
+  
+  "optionsHeader": {
+    "message": "گزینه ها"
+  },
+
+  "optionCurrency": {
+    "message": ":واحد پول"
+  },
+
+  "optionCurrencyDesc": {
+    "message": "نمایش قیمت بیت کوین در ارز انتخاب شده"
+  }
+}
